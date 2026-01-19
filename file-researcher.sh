@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-grep -n "^It takes 12 honey" file-researcher/facts.txt
+grep "^It takes 12 honey" file-researcher/facts.txt
 grep -n "year" file-researcher/facts.txt
