@@ -1,3 +1,3 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
-find . -type f -name "*.txt" -printf "%f\n"
+find . -type f -name "*.txt" -exec basename {} \;
