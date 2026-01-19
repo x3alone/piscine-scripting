@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-username="$(basename "$HOME")"
-echo "Hello $username!"
+echo "Hello ochouari!"
