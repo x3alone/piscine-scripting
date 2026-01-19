@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-echo "Hello $(whoami 2>/dev/null || echo "$USER")!"
+username="${USER:-$(id -un 2>/dev/null)}"
+echo "Hello $username!"
