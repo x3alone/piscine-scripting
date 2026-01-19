@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-find . -type f -name "*.txt" -exec basename {} \;
+find . -type f -name "*.txt" -exec basename {} \; | sed 's/\.txt$//'
