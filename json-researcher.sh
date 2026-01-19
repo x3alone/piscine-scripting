@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 curl -s "https://learn.zone01oujda.ma/assets/superhero/all.json" | \
-jq '.[] | select(.id == 1) | {name, power}'
+jq '.[] | select(.id == 1)' | \
+grep -E '"name"|"power"'
