@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-cd hard-perm || exit 1
+cd hard-perm
 
-chmod 701 0     
-chmod 777 3     
-chmod 701 A     
-chmod 602 1     
-chmod 604 2     
-chmod 510 4     
-chmod 340 5     
-chmod 340 6     
-chmod 510 7     
-chmod 604 8     
-chmod 602 9 
+chmod 401 0     
+chmod 402 3     
+chmod 604 A     
+chmod 777 1     
+chmod 510 2     
+chmod 460 4     
+chmod 460 5     
+chmod 510 6     
+chmod 604 7     
+chmod 402 8     
+chmod 401 9 
