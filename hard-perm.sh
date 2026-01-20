@@ -2,14 +2,14 @@
 
 cd hard-perm
 
-chmod 401 0     
-chmod 402 3     
-chmod 604 A     
-chmod 777 1     
-chmod 510 2     
-chmod 460 4     
-chmod 460 5     
-chmod 510 6     
-chmod 604 7     
-chmod 402 8     
-chmod 401 9 
+chmod 401 0
+chmod 402 1
+chmod 604 2
+chmod 777 3
+chmod 510 4
+chmod 460 5
+chmod 460 6
+chmod 510 7
+chmod 604 8 
+chmod 402 9
+chmod 401 A
