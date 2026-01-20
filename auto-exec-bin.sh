@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd ~/myBins
-ccat > ~/myBins/01exec << 'EOF'
+cat > ~/myBins/01exec << 'EOF'
 #!/usr/bin/env bash
 printf "Hello 01 Scripting Pool\n"
 EOF
