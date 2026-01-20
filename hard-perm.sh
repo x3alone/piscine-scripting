@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd hard-perm || exit 1
 
 chmod 701 0
 chmod 777 3
