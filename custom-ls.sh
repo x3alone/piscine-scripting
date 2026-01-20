@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-alias custom-ls='ls -lS --no-group -s'
+alias custom-ls='ls -lS --no-group -s -A'
