@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-wc -l < facts.txt 
+wc -l < facts
