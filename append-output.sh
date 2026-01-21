@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-grep -n "^J" songs.txt >> results.txt
+grep ' - J' songs.txt >> results.txt
