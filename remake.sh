@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 
-if [[ $# > 1 ]] || ! [[ -d $1 ]] ;then
+if [[ $# -ne 1 || ! -d "$1" ]]; then
     echo "Error"
     exit 1
 fi
 
 TARGET="$1"
+touch "$TARGET/ciao" "$TARGET/guarda" "$TARGET/come" "$TARGET/diverto"
 
-touch -t 202201010001 "$TARGET/ciao"
-chmod 444 "$TARGET/ciao"
+mkdir -p "$TARGET/mamma" "$TARGET/mi"
 
-mkdir -p "$TARGET/mamma"
-chmod 777 "$TARGET/mamma"
-touch -t 202201020001 "$TARGET/mamma"
+chmod 442 "$TARGET/ciao"
+touch -d "2026-01-01 00:01" "$TARGET/ciao"
 
-touch -t 202201030001 "$TARGET/guarda"
+chmod 777 "$TARGET/mamma" 
+touch -d "2026-01-02 00:01" "$TARGET/mamma"
+
 chmod 400 "$TARGET/guarda"
+touch -d "2026-01-03 00:01" "$TARGET/guarda"
 
-touch -t 202201040001 "$TARGET/come"
-chmod 624 "$TARGET/come"
+chmod 642 "$TARGET/come"       
+touch -d "2026-01-04 00:01" "$TARGET/come"
 
-mkdir -p "$TARGET/mi"
-chmod 205 "$TARGET/mi"
-touch -t 202201050001 "$TARGET/mi"
+chmod 452 "$TARGET/mi"          
+touch -d "2026-01-05 00:01" "$TARGET/mi"
 
-touch -t 202201060001 "$TARGET/diverto"
-chmod 471 "$TARGET/diverto"
+chmod 421 "$TARGET/diverto"    
+touch -d "2026-01-06 00:01" "$TARGET/diverto"
