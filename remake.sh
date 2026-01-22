@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $# -ne 1 || ! -d "$1" ]]; then
+if [[ $# -ne 1 && ! -d "$1" ]]; then
     echo "Error"
     exit 1
 fi
