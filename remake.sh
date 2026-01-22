@@ -2,7 +2,7 @@
 
 if [[ $# -ne 1 || ! -d "$1" ]]; then
     echo "Error"
-    exit 0
+    exit 1
 fi
 
 TARGET="$1"
