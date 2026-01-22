@@ -12,4 +12,4 @@ if [[ "$2" == "0" ]]; then
   printf "Error: division by zero is not allowed\n"
   exit 1
 fi
-echo "$(echo "$1 / $2" | bc)"
+echo "$1 / $2" | bc -l
