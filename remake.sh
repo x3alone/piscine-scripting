@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $# -ne 1 || ! -d "$1" ]]; then
-    echo "Error"
+    printf "Error\n"
     exit 1
 fi
 
