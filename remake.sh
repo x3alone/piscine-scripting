@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-if [[ $# -ne 1 ]]; then
-    echo "Error"
+if [[ $# -ne 1 || ! -d "$1" ]]; then
+    printf "Error\n" >&2
     exit 1
 fi
+
 
 TARGET_DIR="$1"
 
