@@ -4,7 +4,7 @@ if [[ $# -ne 2 ]]; then
   printf "Error: two numbers must be provided\n"
   exit 1
 fi
-if ! [[ "$1" =~ ^-?[0-9]+$ ]] || ! [[ "$2" =~ ^-?[0-9]+$ ]]; then
+if ! [[ "$1" =~ ^-?[0-9]+$  &&  "$2" =~ ^-?[0-9]+$ ]]; then
   printf "Error: both arguments must be integers\n"
   exit 1
 fi
@@ -13,4 +13,4 @@ if [[ "$2" == "0" ]]; then
   exit 1
 fi
 
-echo "$(echo "$1 / $2" | bc)"
+echo "$1 / $2" | bc
