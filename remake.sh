@@ -7,11 +7,6 @@ fi
 
 TARGET_DIR="$1"
 
-if [[ ! -d "$TARGET_DIR" ]]; then
-    echo "Error"
-    exit 1
-fi
-
 touch "$TARGET_DIR/ciao"
 chmod 444 "$TARGET_DIR/ciao"       
 touch -t 202201010001 "$TARGET_DIR/ciao"
