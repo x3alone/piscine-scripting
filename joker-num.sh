@@ -30,5 +30,5 @@ for ((i=1; i<=tries; i++)); do
 done
 
 if [ "$found" -eq 0 ]; then
-    echo "You lost, the number was $secret."
+    echo "You lost, the number was $secret"
 fi
