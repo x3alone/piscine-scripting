@@ -16,11 +16,7 @@ declare -a names
 declare -a grades
 
 for ((i=1; i<=students; i++)); do
-    echo "Student Name #$i:"
     read name
-    names+=("$name")
-
-    echo "Student Grade #$i:"
     read grade
 
     if ! [[ "$grade" =~ ^[0-9]+$ ]] || [ "$grade" -lt 0 ] || [ "$grade" -gt 100 ]; then
@@ -28,6 +24,7 @@ for ((i=1; i<=students; i++)); do
         exit 1
     fi
 
+    names+=("$name")
     grades+=("$grade")
 done
 
