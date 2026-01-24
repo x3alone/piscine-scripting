@@ -3,6 +3,7 @@
 secret="$1"
 
 if [ "$#" -ne 1 ] || ! [[ "$secret" =~ ^[0-9]+$ ]] || [ "$secret" -lt 1 ] || [ "$secret" -gt 100 ]; then
+    printf "Error: wrong argument"
     exit 1
 fi
 
