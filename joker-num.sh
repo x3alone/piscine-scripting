@@ -8,10 +8,10 @@ if [ "$#" -ne 1 ] || ! [[ "$secret" =~ ^[0-9]+$ ]] || [ "$secret" -lt 1 ] || [ "
 fi
 
 tries=5
-found=0
+valid_guesses=0
 
-for ((i=1; i<=tries; i++)); do
-    tries_left=$((tries - i + 1))
+for ((i=1; i<=tries; )); do
+    tries_left=$((tries - valid_guesses))
     echo "Enter your guess ($tries_left tries left):"
     read guess
 
@@ -19,17 +19,17 @@ for ((i=1; i<=tries; i++)); do
         continue
     fi
 
+    valid_guesses=$((valid_guesses + 1))
+    i=$((i + 1))
+
     if [ "$guess" -gt "$secret" ]; then
         echo "Go down"
     elif [ "$guess" -lt "$secret" ]; then
         echo "Go up"
     else
-        echo "Congratulations, you found the number in $i moves!"
-        found=1
-        break
+        echo "Congratulations, you found the number in $valid_guesses moves!"
+        exit 0
     fi
 done
 
-if [ "$found" -eq 0 ]; then
-    echo "You lost, the number was $secret"
-fi
+echo "You lost, the number was $secret"
