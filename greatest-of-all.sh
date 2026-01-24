@@ -1,17 +1,23 @@
-	#!/usr/bin/env bash
+#!/usr/bin/env bash
+
 largest=0
+
 for i in {1..10}; do
     read -p "Enter a number: " num
+
     if ! [[ "$num" =~ ^[0-9]+$ ]]; then
         echo "ERROR: Invalid input only positive numerical characters are allowed"
         exit 1
     fi
+
     if (( num > 10000 )); then
         echo "ERROR: The number entered is too large"
         exit 1
     fi
+
     if (( num > largest )); then
         largest=$num
     fi
 done
-echo "The largest number is $largest"
+
+echo "The largest number is: $largest"
