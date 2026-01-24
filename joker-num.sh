@@ -11,7 +11,7 @@ found=0
 
 for ((i=1; i<=tries; i++)); do
     tries_left=$((tries - i + 1))
-    echo "Enter your guess ($tries_left tries left)"
+    echo "Enter your guess ($tries_left tries left):"
     read guess
 
     if ! [[ "$guess" =~ ^[0-9]+$ ]]; then
