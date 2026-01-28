@@ -1,7 +1,5 @@
-import custom_calendar
+import string_processing
 
-print(custom_calendar.day_from_number(2))
-print(custom_calendar.day_from_number(1))
-print(custom_calendar.day_from_number(1000))
-print(custom_calendar.day_to_number('Sunday'))
-print(custom_calendar.day_to_number('invalid day'))
+if __name__ == '__main__':
+    my_sentence = "It's not possible, you can't ask for a raise"
+    print(string_processing.tokenize(my_sentence))
