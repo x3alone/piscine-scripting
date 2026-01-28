@@ -1,5 +1,3 @@
-import string_processing
+import read_file
 
-if __name__ == '__main__':
-    my_sentence = "It's not possible, you can't ask for a raise"
-    print(string_processing.tokenize(my_sentence))
+print(read_file.get_recipes('recipes_data.json'))
