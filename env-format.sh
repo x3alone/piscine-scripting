@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo "$PWD"
+printf "%s\n" "$PWD"
 
 printenv | cut -d= -f1 | grep 'H'
